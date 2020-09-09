@@ -1,0 +1,32 @@
+{
+  "name": "node-socket-io-backend",
+  "version": "1.0.0",
+  "description": "Socket.io chat server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --inspect -r dotenv/config ./server/index.js",
+    "start": "node -r dotenv/config ./server/index.js"
+  },
+  "keywords": [],
+  "author": "S.B.",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "node-sass-middleware": "^0.11.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
+  }
+}
