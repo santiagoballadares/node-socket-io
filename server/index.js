@@ -4,10 +4,12 @@
 
 const debug = require('debug')('node-socket-io-backend:server');
 const http = require('http');
+const socketIO = require('socket.io');
 
 const app = require('./app');
 
 const { normalizePort } = require('./utils');
+const { setupSocketIO } = require('./middleware/socketIO');
 
 /**
  * Get port from environment and store in Express.
@@ -21,6 +23,13 @@ app.set('port', port);
  */
 
 const server = http.createServer(app);
+
+/**
+ * Create Socket.io and setup server socket logic.
+ */
+
+const io = socketIO(server);
+setupSocketIO(io);
 
 /**
  * Event listener for HTTP server "error" event.
