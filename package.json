@@ -1,5 +1,5 @@
 {
-  "name": "node-socket-io-backend",
+  "name": "node-socket-io",
   "version": "1.0.0",
   "description": "Socket.io chat server",
   "main": "index.js",
